@@ -34,8 +34,8 @@ contact:
 
 version: 0.1.0
 
-baseURL: https://geolabs.github.io/bblocks-generic-profiles/
-gitHubBaseURL: https://github.com/GeoLabs/bblocks-generic-profiles/
+baseURL: https://gfenoy.github.io/bblocks-generic-profiles/
+gitHubBaseURL: https://github.com/gfenoy/bblocks-generic-profiles/
 
 keywords:
   - generic profile
