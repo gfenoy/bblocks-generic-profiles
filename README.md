@@ -1,4 +1,4 @@
-# bblocks-generic-profiles
+# bblocks-generic-profiles (backup)
 
 OGC Building Blocks register holding a general-purpose, engine- and format-agnostic vocabulary of
 process Concepts, Generic Profiles and Implementation Profiles, independent of any one project.
