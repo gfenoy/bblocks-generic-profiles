@@ -115,7 +115,7 @@ process of the ZOO-Project Geonovum testbed.
 #### jsonld
 ```jsonld
 {
-  "@context": "https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/convex-hull/context.jsonld",
+  "@context": "https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/convex-hull/context.jsonld",
   "id": "https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/convex-hull",
   "type": "ImplementationProfile",
   "prefLabel": "Convex hull",
@@ -196,21 +196,21 @@ process of the ZOO-Project Geonovum testbed.
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix gp: <https://geolabs.github.io/bblocks-generic-profiles/def/> .
 @prefix ns1: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/outputs/> .
-@prefix ns2: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/inputs/> .
-@prefix ns3: <https://w3id.org/ogc/api/schema/> .
+@prefix ns2: <https://w3id.org/ogc/api/schema/> .
+@prefix ns3: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/inputs/> .
 @prefix proc: <https://w3id.org/ogc/api/processes/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/convex-hull> a skos:Concept ;
-    dcterms:source [ dcterms:references <https://host1.tb.geonovum.geolabs.fr/ogc-api/processes/ConvexHull> ;
-            dcterms:title "ZOO-Project Geonovum testbed -- ConvexHull: Compute convex hull." ],
-        [ dcterms:title "ISO/IEC 13249-3:2016 SQL multimedia and application packages -- Part 3: Spatial, ST_ConvexHull" ],
+    dcterms:source [ dcterms:title "ISO/IEC 13249-3:2016 SQL multimedia and application packages -- Part 3: Spatial, ST_ConvexHull" ],
         [ dcterms:references <https://www.ogc.org/standards/sfs/> ;
-            dcterms:title "OGC 99-049 OpenGIS Simple Features Specification For SQL, Revision 1.1, §2.1.1.3 ConvexHull()" ] ;
+            dcterms:title "OGC 99-049 OpenGIS Simple Features Specification For SQL, Revision 1.1, §2.1.1.3 ConvexHull()" ],
+        [ dcterms:references <https://host1.tb.geonovum.geolabs.fr/ogc-api/processes/ConvexHull> ;
+            dcterms:title "ZOO-Project Geonovum testbed -- ConvexHull: Compute convex hull." ] ;
     skos:definition "Returns a geometry that represents the convex hull of this Geometry." ;
     skos:inScheme gp:implementation-profile ;
     skos:prefLabel "Convex hull" ;
-    gp:inputs [ ns2:geometry [ proc:keywords "GML",
+    gp:inputs [ ns3:geometry [ proc:keywords "GML",
                         "geometry" ;
                     proc:metadata [ dcterms:title "Process Concept: Vector Geometry Processing" ;
                             proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/concept/vector-geometry-processing> ;
@@ -218,17 +218,17 @@ process of the ZOO-Project Geonovum testbed.
                         [ dcterms:title "Generic Profile: Unary geometry operation" ;
                             proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/unary-geometry-operation> ;
                             proc:role <http://www.opengis.net/spec/wps/2.0/def/process-profile/generic> ] ;
-                    proc:schema [ a ns3:string ;
-                            ns3:contentMediaType "text/xml" ;
-                            ns3:description "GML" ] ] ] ;
+                    proc:schema [ a ns2:string ;
+                            ns2:contentMediaType "text/xml" ;
+                            ns2:description "GML" ] ] ] ;
     gp:outputs [ ns1:result [ proc:keywords "GML",
                         "geometry" ;
                     proc:metadata [ dcterms:title "Generic Profile: Unary geometry operation" ;
                             proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/unary-geometry-operation> ;
                             proc:role <http://www.opengis.net/spec/wps/2.0/def/process-profile/generic> ] ;
-                    proc:schema [ a ns3:string ;
-                            ns3:contentMediaType "text/xml" ;
-                            ns3:description "GML" ] ] ] ;
+                    proc:schema [ a ns2:string ;
+                            ns2:contentMediaType "text/xml" ;
+                            ns2:description "GML" ] ] ] ;
     gp:refinesGenericProfile <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/unary-geometry-operation> ;
     gp:status "submitted" ;
     proc:keywords "ConvexHull",
@@ -247,7 +247,7 @@ $schema: https://json-schema.org/draft/2020-12/schema
 description: The Implementation Profile "Convex hull" -- see generic-profiles.implementation-profile
   for the general shape every Implementation Profile shares.
 allOf:
-- $ref: https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/schema.yaml
+- $ref: https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/schema.yaml
 - type: object
   properties:
     id:
@@ -349,8 +349,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/convex-hull/schema.json)
-* JSON version: [schema.json](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/convex-hull/schema.yaml)
+* YAML version: [schema.yaml](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/convex-hull/schema.json)
+* JSON version: [schema.json](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/convex-hull/schema.yaml)
 
 
 # JSON-LD Context
@@ -440,7 +440,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/convex-hull/context.jsonld)
+[context.jsonld](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/convex-hull/context.jsonld)
 
 ## Sources
 
@@ -452,6 +452,6 @@ You can find the full JSON-LD context here:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/GeoLabs/bblocks-generic-profiles](https://github.com/GeoLabs/bblocks-generic-profiles)
+* URL: [https://github.com/gfenoy/bblocks-generic-profiles](https://github.com/gfenoy/bblocks-generic-profiles)
 * Path: `_sources/implementation-profile/convex-hull`
 
