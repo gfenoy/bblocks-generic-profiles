@@ -56,7 +56,7 @@ Implementation Profile -> Implementation (instance level).
 #### jsonld
 ```jsonld
 {
-  "@context": "https://geolabs.github.io/bblocks-generic-profiles/build/annotated/concept/point-cloud-processing/context.jsonld",
+  "@context": "https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/concept/point-cloud-processing/context.jsonld",
   "id": "https://geolabs.github.io/bblocks-generic-profiles/def/concept/point-cloud-processing",
   "type": "Concept",
   "prefLabel": "Point Cloud Processing",
@@ -83,10 +83,10 @@ Implementation Profile -> Implementation (instance level).
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 <https://geolabs.github.io/bblocks-generic-profiles/def/concept/point-cloud-processing> a skos:Concept ;
-    dcterms:source [ dcterms:references <https://saga-gis.sourceforge.io/saga_tool_doc/7.3.0/pointcloud_tools.html> ;
-            dcterms:title "SAGA 7.3.0 tool library Shapes - Point Clouds" ],
-        [ dcterms:references <https://www.ogc.org/standards/las/> ;
-            dcterms:title "OGC 17-030r1 LAS Specification 1.4 OGC Community Standard" ] ;
+    dcterms:source [ dcterms:references <https://www.ogc.org/standards/las/> ;
+            dcterms:title "OGC 17-030r1 LAS Specification 1.4 OGC Community Standard" ],
+        [ dcterms:references <https://saga-gis.sourceforge.io/saga_tool_doc/7.3.0/pointcloud_tools.html> ;
+            dcterms:title "SAGA 7.3.0 tool library Shapes - Point Clouds" ] ;
     skos:definition "Operations on point clouds: converting them to other kinds of data (grids, feature collections) and reducing them (thinning) -- independent of any input/output signature or implementation (OGC 14-065 WPS 2.0.2 §7.5.1)." ;
     skos:inScheme gp:concept ;
     skos:prefLabel "Point Cloud Processing" ;
@@ -102,7 +102,7 @@ $schema: https://json-schema.org/draft/2020-12/schema
 description: The Concept "Point Cloud Processing" -- see generic-profiles.concept
   for the general shape every Concept shares.
 allOf:
-- $ref: https://geolabs.github.io/bblocks-generic-profiles/build/annotated/concept/schema.yaml
+- $ref: https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/concept/schema.yaml
 - type: object
   properties:
     id:
@@ -134,13 +134,18 @@ x-jsonld-prefixes:
   skos: http://www.w3.org/2004/02/skos/core#
   gp: https://geolabs.github.io/bblocks-generic-profiles/def/
   dct: http://purl.org/dc/terms/
+x-bblocks-metadata:
+  itemIdentifier: generic-profiles.concept.point-cloud-processing
+  register: https://gfenoy.github.io/bblocks-generic-profiles/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-10-09'
 
 ```
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/concept/point-cloud-processing/schema.json)
-* JSON version: [schema.json](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/concept/point-cloud-processing/schema.yaml)
+* YAML version: [schema.yaml](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/concept/point-cloud-processing/schema.json)
+* JSON version: [schema.json](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/concept/point-cloud-processing/schema.yaml)
 
 
 # JSON-LD Context
@@ -178,7 +183,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/concept/point-cloud-processing/context.jsonld)
+[context.jsonld](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/concept/point-cloud-processing/context.jsonld)
 
 ## Sources
 
@@ -190,6 +195,6 @@ You can find the full JSON-LD context here:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/GeoLabs/bblocks-generic-profiles](https://github.com/GeoLabs/bblocks-generic-profiles)
+* URL: [https://github.com/gfenoy/bblocks-generic-profiles](https://github.com/gfenoy/bblocks-generic-profiles)
 * Path: `_sources/concept/point-cloud-processing`
 

@@ -1,7 +1,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix gp: <https://geolabs.github.io/bblocks-generic-profiles/def/> .
-@prefix ns1: <https://w3id.org/ogc/api/schema/> .
-@prefix ns2: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/inputs/> .
+@prefix ns1: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/inputs/> .
+@prefix ns2: <https://w3id.org/ogc/api/schema/> .
 @prefix ns3: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/outputs/> .
 @prefix proc: <https://w3id.org/ogc/api/processes/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -14,7 +14,7 @@
     skos:definition "Computes the bounding envelope of a raster coverage, as a vector polygon." ;
     skos:inScheme gp:implementation-profile ;
     skos:prefLabel "Raster extent" ;
-    gp:inputs [ ns2:raster <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-extent/inputs/raster> ] ;
+    gp:inputs [ ns1:raster <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-extent/inputs/raster> ] ;
     gp:outputs [ ns3:result <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-extent/outputs/result> ] ;
     gp:refinesGenericProfile <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-extent> ;
     gp:status "submitted" ;
@@ -23,12 +23,12 @@
         "coverage",
         "extent",
         "raster" ;
-    proc:metadata [ dcterms:title "Generic Profile: Raster extent" ;
-            proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-extent> ;
-            proc:role <http://www.opengis.net/spec/wps/2.0/def/process-profile/generic> ],
-        [ dcterms:title "Process Concept: Raster Coverage Processing" ;
+    proc:metadata [ dcterms:title "Process Concept: Raster Coverage Processing" ;
             proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/concept/raster-coverage-processing> ;
-            proc:role <http://www.opengis.net/spec/wps/2.0/def/process-profile/concept> ] .
+            proc:role <http://www.opengis.net/spec/wps/2.0/def/process-profile/concept> ],
+        [ dcterms:title "Generic Profile: Raster extent" ;
+            proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-extent> ;
+            proc:role <http://www.opengis.net/spec/wps/2.0/def/process-profile/generic> ] .
 
 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-extent/inputs/raster> dcterms:type <https://geolabs.github.io/bblocks-generic-profiles/def/data-type/raster> ;
     proc:keywords "GeoTIFF",
@@ -36,10 +36,10 @@
     proc:metadata [ dcterms:title "Generic Profile: Raster extent -- input `raster`" ;
             proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-extent/inputs/raster> ;
             proc:role <https://geolabs.github.io/bblocks-generic-profiles/def/role/generic-input> ] ;
-    proc:schema [ a ns1:string ;
-            ns1:contentEncoding "base64" ;
-            ns1:contentMediaType "image/tiff" ;
-            ns1:description "GeoTIFF" ] .
+    proc:schema [ a ns2:string ;
+            ns2:contentEncoding "base64" ;
+            ns2:contentMediaType "image/tiff" ;
+            ns2:description "GeoTIFF" ] .
 
 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-extent/outputs/result> dcterms:type <https://geolabs.github.io/bblocks-generic-profiles/def/data-type/surface> ;
     proc:keywords "GML",
@@ -47,7 +47,7 @@
     proc:metadata [ dcterms:title "Generic Profile: Raster extent -- output `result`" ;
             proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-extent/outputs/result> ;
             proc:role <https://geolabs.github.io/bblocks-generic-profiles/def/role/generic-output> ] ;
-    proc:schema [ a ns1:string ;
-            ns1:contentMediaType "text/xml" ;
-            ns1:description "GML" ] .
+    proc:schema [ a ns2:string ;
+            ns2:contentMediaType "text/xml" ;
+            ns2:description "GML" ] .
 

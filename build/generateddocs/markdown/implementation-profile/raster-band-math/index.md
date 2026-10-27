@@ -173,7 +173,7 @@ the ZOO-Project Geonovum testbed
 #### jsonld
 ```jsonld
 {
-  "@context": "https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/raster-band-math/context.jsonld",
+  "@context": "https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/raster-band-math/context.jsonld",
   "id": "https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-band-math",
   "type": "ImplementationProfile",
   "prefLabel": "Raster band math",
@@ -279,8 +279,8 @@ the ZOO-Project Geonovum testbed
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix gp: <https://geolabs.github.io/bblocks-generic-profiles/def/> .
 @prefix ns1: <https://w3id.org/ogc/api/schema/> .
-@prefix ns2: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/inputs/> .
-@prefix ns3: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/outputs/> .
+@prefix ns2: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/outputs/> .
+@prefix ns3: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/inputs/> .
 @prefix proc: <https://w3id.org/ogc/api/processes/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
@@ -292,9 +292,9 @@ the ZOO-Project Geonovum testbed
     skos:definition "Evaluates a user-supplied mathematical expression per pixel across one or more input rasters, producing a monoband output raster." ;
     skos:inScheme gp:implementation-profile ;
     skos:prefLabel "Raster band math" ;
-    gp:inputs [ ns2:expression <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-band-math/inputs/expression> ;
-            ns2:rasters <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-band-math/inputs/rasters> ] ;
-    gp:outputs [ ns3:raster <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-band-math/outputs/raster> ] ;
+    gp:inputs [ ns3:expression <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-band-math/inputs/expression> ;
+            ns3:rasters <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-band-math/inputs/rasters> ] ;
+    gp:outputs [ ns2:raster <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-band-math/outputs/raster> ] ;
     gp:refinesGenericProfile <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-band-math> ;
     gp:status "submitted" ;
     proc:keywords "BandMath",
@@ -348,7 +348,7 @@ $schema: https://json-schema.org/draft/2020-12/schema
 description: The Implementation Profile "Raster band math" -- see generic-profiles.implementation-profile
   for the general shape every Implementation Profile shares.
 allOf:
-- $ref: https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/schema.yaml
+- $ref: https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/schema.yaml
 - type: object
   properties:
     id:
@@ -534,13 +534,18 @@ x-jsonld-prefixes:
   gp: https://geolabs.github.io/bblocks-generic-profiles/def/
   proc: https://w3id.org/ogc/api/processes/
   dct: http://purl.org/dc/terms/
+x-bblocks-metadata:
+  itemIdentifier: generic-profiles.implementation-profile.raster-band-math
+  register: https://gfenoy.github.io/bblocks-generic-profiles/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-10-09'
 
 ```
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/raster-band-math/schema.json)
-* JSON version: [schema.json](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/raster-band-math/schema.yaml)
+* YAML version: [schema.yaml](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/raster-band-math/schema.json)
+* JSON version: [schema.json](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/raster-band-math/schema.yaml)
 
 
 # JSON-LD Context
@@ -625,7 +630,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/raster-band-math/context.jsonld)
+[context.jsonld](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/raster-band-math/context.jsonld)
 
 ## Sources
 
@@ -636,6 +641,6 @@ You can find the full JSON-LD context here:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/GeoLabs/bblocks-generic-profiles](https://github.com/GeoLabs/bblocks-generic-profiles)
+* URL: [https://github.com/gfenoy/bblocks-generic-profiles](https://github.com/gfenoy/bblocks-generic-profiles)
 * Path: `_sources/implementation-profile/raster-band-math`
 

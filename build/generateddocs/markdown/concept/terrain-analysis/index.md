@@ -56,7 +56,7 @@ Implementation Profile -> Implementation (instance level).
 #### jsonld
 ```jsonld
 {
-  "@context": "https://geolabs.github.io/bblocks-generic-profiles/build/annotated/concept/terrain-analysis/context.jsonld",
+  "@context": "https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/concept/terrain-analysis/context.jsonld",
   "id": "https://geolabs.github.io/bblocks-generic-profiles/def/concept/terrain-analysis",
   "type": "Concept",
   "prefLabel": "Terrain Analysis",
@@ -82,9 +82,9 @@ Implementation Profile -> Implementation (instance level).
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 <https://geolabs.github.io/bblocks-generic-profiles/def/concept/terrain-analysis> a skos:Concept ;
-    dcterms:source [ dcterms:title "Wilson, J.P., Gallant, J.C. (2000): Terrain Analysis: Principles and Applications (cited by SAGA's Topographic Position Index tool)" ],
-        [ dcterms:references <https://saga-gis.sourceforge.io/saga_tool_doc/7.3.0/index.html> ;
-            dcterms:title "SAGA 7.3.0 tool libraries, category Terrain Analysis" ] ;
+    dcterms:source [ dcterms:references <https://saga-gis.sourceforge.io/saga_tool_doc/7.3.0/index.html> ;
+            dcterms:title "SAGA 7.3.0 tool libraries, category Terrain Analysis" ],
+        [ dcterms:title "Wilson, J.P., Gallant, J.C. (2000): Terrain Analysis: Principles and Applications (cited by SAGA's Topographic Position Index tool)" ] ;
     skos:definition "Operations deriving terrain attributes from an elevation model: local surface derivatives (slope, aspect, curvature), neighbourhood indices (terrain ruggedness, topographic position) and illumination (hillshading) -- independent of any input/output signature or implementation (OGC 14-065 WPS 2.0.2 §7.5.1). A kind of raster coverage processing: an elevation model is a single-band raster whose values are elevations." ;
     skos:inScheme gp:concept ;
     skos:prefLabel "Terrain Analysis" ;
@@ -100,7 +100,7 @@ $schema: https://json-schema.org/draft/2020-12/schema
 description: The Concept "Terrain Analysis" -- see generic-profiles.concept for the
   general shape every Concept shares.
 allOf:
-- $ref: https://geolabs.github.io/bblocks-generic-profiles/build/annotated/concept/schema.yaml
+- $ref: https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/concept/schema.yaml
 - type: object
   properties:
     id:
@@ -132,13 +132,18 @@ x-jsonld-prefixes:
   skos: http://www.w3.org/2004/02/skos/core#
   gp: https://geolabs.github.io/bblocks-generic-profiles/def/
   dct: http://purl.org/dc/terms/
+x-bblocks-metadata:
+  itemIdentifier: generic-profiles.concept.terrain-analysis
+  register: https://gfenoy.github.io/bblocks-generic-profiles/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-10-09'
 
 ```
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/concept/terrain-analysis/schema.json)
-* JSON version: [schema.json](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/concept/terrain-analysis/schema.yaml)
+* YAML version: [schema.yaml](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/concept/terrain-analysis/schema.json)
+* JSON version: [schema.json](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/concept/terrain-analysis/schema.yaml)
 
 
 # JSON-LD Context
@@ -176,7 +181,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/concept/terrain-analysis/context.jsonld)
+[context.jsonld](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/concept/terrain-analysis/context.jsonld)
 
 ## Sources
 
@@ -188,6 +193,6 @@ You can find the full JSON-LD context here:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/GeoLabs/bblocks-generic-profiles](https://github.com/GeoLabs/bblocks-generic-profiles)
+* URL: [https://github.com/gfenoy/bblocks-generic-profiles](https://github.com/gfenoy/bblocks-generic-profiles)
 * Path: `_sources/concept/terrain-analysis`
 

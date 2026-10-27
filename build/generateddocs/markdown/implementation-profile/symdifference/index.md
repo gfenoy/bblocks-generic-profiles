@@ -164,7 +164,7 @@ in `bblocks-process-profiles` -- a real process of the ZOO-Project Geonovum test
 #### jsonld
 ```jsonld
 {
-  "@context": "https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/symdifference/context.jsonld",
+  "@context": "https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/symdifference/context.jsonld",
   "id": "https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/symdifference",
   "type": "ImplementationProfile",
   "prefLabel": "Symmetric difference",
@@ -272,9 +272,9 @@ in `bblocks-process-profiles` -- a real process of the ZOO-Project Geonovum test
 ```ttl
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix gp: <https://geolabs.github.io/bblocks-generic-profiles/def/> .
-@prefix ns1: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/outputs/> .
-@prefix ns2: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/inputs/> .
-@prefix ns3: <https://w3id.org/ogc/api/schema/> .
+@prefix ns1: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/inputs/> .
+@prefix ns2: <https://w3id.org/ogc/api/schema/> .
+@prefix ns3: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/outputs/> .
 @prefix proc: <https://w3id.org/ogc/api/processes/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
@@ -285,9 +285,9 @@ in `bblocks-process-profiles` -- a real process of the ZOO-Project Geonovum test
     skos:definition "Returns a geometric object representing the point set symmetric difference of this geometric object with anotherGeometry." ;
     skos:inScheme gp:implementation-profile ;
     skos:prefLabel "Symmetric difference" ;
-    gp:inputs [ ns2:geometry1 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/symdifference/inputs/geometry1> ;
-            ns2:geometry2 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/symdifference/inputs/geometry2> ] ;
-    gp:outputs [ ns1:result <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/symdifference/outputs/result> ] ;
+    gp:inputs [ ns1:geometry1 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/symdifference/inputs/geometry1> ;
+            ns1:geometry2 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/symdifference/inputs/geometry2> ] ;
+    gp:outputs [ ns3:result <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/symdifference/outputs/result> ] ;
     gp:refinesGenericProfile <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/binary-spatial-operation> ;
     gp:status "submitted" ;
     proc:keywords "ST_SymDifference",
@@ -309,9 +309,9 @@ in `bblocks-process-profiles` -- a real process of the ZOO-Project Geonovum test
     proc:metadata [ dcterms:title "Generic Profile: Binary spatial set operation -- input `geometry1`" ;
             proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/binary-spatial-operation/inputs/geometry1> ;
             proc:role <https://geolabs.github.io/bblocks-generic-profiles/def/role/generic-input> ] ;
-    proc:schema [ a ns3:string ;
-            ns3:contentMediaType "text/xml" ;
-            ns3:description "GML" ] .
+    proc:schema [ a ns2:string ;
+            ns2:contentMediaType "text/xml" ;
+            ns2:description "GML" ] .
 
 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/symdifference/inputs/geometry2> dcterms:type <https://geolabs.github.io/bblocks-generic-profiles/def/data-type/geometry> ;
     proc:keywords "GML",
@@ -319,9 +319,9 @@ in `bblocks-process-profiles` -- a real process of the ZOO-Project Geonovum test
     proc:metadata [ dcterms:title "Generic Profile: Binary spatial set operation -- input `geometry2`" ;
             proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/binary-spatial-operation/inputs/geometry2> ;
             proc:role <https://geolabs.github.io/bblocks-generic-profiles/def/role/generic-input> ] ;
-    proc:schema [ a ns3:string ;
-            ns3:contentMediaType "text/xml" ;
-            ns3:description "GML" ] .
+    proc:schema [ a ns2:string ;
+            ns2:contentMediaType "text/xml" ;
+            ns2:description "GML" ] .
 
 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/symdifference/outputs/result> dcterms:type <https://geolabs.github.io/bblocks-generic-profiles/def/data-type/geometry> ;
     proc:keywords "GML",
@@ -329,9 +329,9 @@ in `bblocks-process-profiles` -- a real process of the ZOO-Project Geonovum test
     proc:metadata [ dcterms:title "Generic Profile: Binary spatial set operation -- output `result`" ;
             proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/binary-spatial-operation/outputs/result> ;
             proc:role <https://geolabs.github.io/bblocks-generic-profiles/def/role/generic-output> ] ;
-    proc:schema [ a ns3:string ;
-            ns3:contentMediaType "text/xml" ;
-            ns3:description "GML" ] .
+    proc:schema [ a ns2:string ;
+            ns2:contentMediaType "text/xml" ;
+            ns2:description "GML" ] .
 
 
 ```
@@ -343,7 +343,7 @@ $schema: https://json-schema.org/draft/2020-12/schema
 description: The Implementation Profile "Symmetric difference" -- see generic-profiles.implementation-profile
   for the general shape every Implementation Profile shares.
 allOf:
-- $ref: https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/schema.yaml
+- $ref: https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/schema.yaml
 - type: object
   properties:
     id:
@@ -531,13 +531,18 @@ x-jsonld-prefixes:
   gp: https://geolabs.github.io/bblocks-generic-profiles/def/
   proc: https://w3id.org/ogc/api/processes/
   dct: http://purl.org/dc/terms/
+x-bblocks-metadata:
+  itemIdentifier: generic-profiles.implementation-profile.symdifference
+  register: https://gfenoy.github.io/bblocks-generic-profiles/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-10-09'
 
 ```
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/symdifference/schema.json)
-* JSON version: [schema.json](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/symdifference/schema.yaml)
+* YAML version: [schema.yaml](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/symdifference/schema.json)
+* JSON version: [schema.json](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/symdifference/schema.yaml)
 
 
 # JSON-LD Context
@@ -622,7 +627,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/symdifference/context.jsonld)
+[context.jsonld](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/symdifference/context.jsonld)
 
 ## Sources
 
@@ -633,6 +638,6 @@ You can find the full JSON-LD context here:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/GeoLabs/bblocks-generic-profiles](https://github.com/GeoLabs/bblocks-generic-profiles)
+* URL: [https://github.com/gfenoy/bblocks-generic-profiles](https://github.com/gfenoy/bblocks-generic-profiles)
 * Path: `_sources/implementation-profile/symdifference`
 

@@ -160,7 +160,7 @@ in `bblocks-process-profiles` -- a real process of the ZOO-Project Geonovum test
 #### jsonld
 ```jsonld
 {
-  "@context": "https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/equals/context.jsonld",
+  "@context": "https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/equals/context.jsonld",
   "id": "https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/equals",
   "type": "ImplementationProfile",
   "prefLabel": "Equals",
@@ -263,21 +263,21 @@ in `bblocks-process-profiles` -- a real process of the ZOO-Project Geonovum test
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix gp: <https://geolabs.github.io/bblocks-generic-profiles/def/> .
 @prefix ns1: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/inputs/> .
-@prefix ns2: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/outputs/> .
-@prefix ns3: <https://w3id.org/ogc/api/schema/> .
+@prefix ns2: <https://w3id.org/ogc/api/schema/> .
+@prefix ns3: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/outputs/> .
 @prefix proc: <https://w3id.org/ogc/api/processes/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/equals> a skos:Concept ;
-    dcterms:source [ dcterms:title "ISO/IEC 13249-3:2016 Information technology -- Database languages -- SQL multimedia and application packages -- Part 3: Spatial, §5.1.16 ST_Equals" ],
-        [ dcterms:references <https://www.ogc.org/standards/sfa/> ;
-            dcterms:title "OGC 06-103r4 Simple Feature Access - Part 1: Common Architecture, §6.1.14" ] ;
+    dcterms:source [ dcterms:references <https://www.ogc.org/standards/sfa/> ;
+            dcterms:title "OGC 06-103r4 Simple Feature Access - Part 1: Common Architecture, §6.1.14" ],
+        [ dcterms:title "ISO/IEC 13249-3:2016 Information technology -- Database languages -- SQL multimedia and application packages -- Part 3: Spatial, §5.1.16 ST_Equals" ] ;
     skos:definition "Returns TRUE if this geometric object is spatially equal to anotherGeometry (same point set), independent of vertex order or representation." ;
     skos:inScheme gp:implementation-profile ;
     skos:prefLabel "Equals" ;
     gp:inputs [ ns1:geometry1 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/equals/inputs/geometry1> ;
             ns1:geometry2 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/equals/inputs/geometry2> ] ;
-    gp:outputs [ ns2:result <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/equals/outputs/result> ] ;
+    gp:outputs [ ns3:result <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/equals/outputs/result> ] ;
     gp:refinesGenericProfile <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/binary-spatial-predicate> ;
     gp:status "submitted" ;
     proc:keywords "Equals",
@@ -299,9 +299,9 @@ in `bblocks-process-profiles` -- a real process of the ZOO-Project Geonovum test
     proc:metadata [ dcterms:title "Generic Profile: Binary spatial predicate -- input `geometry1`" ;
             proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/binary-spatial-predicate/inputs/geometry1> ;
             proc:role <https://geolabs.github.io/bblocks-generic-profiles/def/role/generic-input> ] ;
-    proc:schema [ a ns3:string ;
-            ns3:contentMediaType "text/xml" ;
-            ns3:description "GML" ] .
+    proc:schema [ a ns2:string ;
+            ns2:contentMediaType "text/xml" ;
+            ns2:description "GML" ] .
 
 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/equals/inputs/geometry2> dcterms:type <https://geolabs.github.io/bblocks-generic-profiles/def/data-type/geometry> ;
     proc:keywords "GML",
@@ -309,9 +309,9 @@ in `bblocks-process-profiles` -- a real process of the ZOO-Project Geonovum test
     proc:metadata [ dcterms:title "Generic Profile: Binary spatial predicate -- input `geometry2`" ;
             proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/binary-spatial-predicate/inputs/geometry2> ;
             proc:role <https://geolabs.github.io/bblocks-generic-profiles/def/role/generic-input> ] ;
-    proc:schema [ a ns3:string ;
-            ns3:contentMediaType "text/xml" ;
-            ns3:description "GML" ] .
+    proc:schema [ a ns2:string ;
+            ns2:contentMediaType "text/xml" ;
+            ns2:description "GML" ] .
 
 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/equals/outputs/result> dcterms:type <https://geolabs.github.io/bblocks-generic-profiles/def/data-type/boolean> ;
     proc:keywords "boolean" ;
@@ -329,7 +329,7 @@ $schema: https://json-schema.org/draft/2020-12/schema
 description: The Implementation Profile "Equals" -- see generic-profiles.implementation-profile
   for the general shape every Implementation Profile shares.
 allOf:
-- $ref: https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/schema.yaml
+- $ref: https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/schema.yaml
 - type: object
   properties:
     id:
@@ -517,13 +517,18 @@ x-jsonld-prefixes:
   gp: https://geolabs.github.io/bblocks-generic-profiles/def/
   proc: https://w3id.org/ogc/api/processes/
   dct: http://purl.org/dc/terms/
+x-bblocks-metadata:
+  itemIdentifier: generic-profiles.implementation-profile.equals
+  register: https://gfenoy.github.io/bblocks-generic-profiles/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-10-09'
 
 ```
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/equals/schema.json)
-* JSON version: [schema.json](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/equals/schema.yaml)
+* YAML version: [schema.yaml](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/equals/schema.json)
+* JSON version: [schema.json](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/equals/schema.yaml)
 
 
 # JSON-LD Context
@@ -608,7 +613,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/equals/context.jsonld)
+[context.jsonld](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/equals/context.jsonld)
 
 ## Sources
 
@@ -619,6 +624,6 @@ You can find the full JSON-LD context here:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/GeoLabs/bblocks-generic-profiles](https://github.com/GeoLabs/bblocks-generic-profiles)
+* URL: [https://github.com/gfenoy/bblocks-generic-profiles](https://github.com/gfenoy/bblocks-generic-profiles)
 * Path: `_sources/implementation-profile/equals`
 

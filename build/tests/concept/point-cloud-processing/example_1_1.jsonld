@@ -1,5 +1,5 @@
 {
-  "@context": "https://geolabs.github.io/bblocks-generic-profiles/build/annotated/concept/point-cloud-processing/context.jsonld",
+  "@context": "https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/concept/point-cloud-processing/context.jsonld",
   "id": "https://geolabs.github.io/bblocks-generic-profiles/def/concept/point-cloud-processing",
   "type": "Concept",
   "prefLabel": "Point Cloud Processing",

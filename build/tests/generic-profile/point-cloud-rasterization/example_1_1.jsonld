@@ -1,5 +1,5 @@
 {
-  "@context": "https://geolabs.github.io/bblocks-generic-profiles/build/annotated/generic-profile/point-cloud-rasterization/context.jsonld",
+  "@context": "https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/generic-profile/point-cloud-rasterization/context.jsonld",
   "id": "https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/point-cloud-rasterization",
   "type": "GenericProfile",
   "prefLabel": "Point cloud rasterization",

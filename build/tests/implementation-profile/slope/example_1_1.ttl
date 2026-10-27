@@ -7,11 +7,11 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/slope> a skos:Concept ;
-    dcterms:source [ dcterms:references <https://saga-gis.sourceforge.io/saga_tool_doc/7.3.0/ta_morphometry_0.html> ;
+    dcterms:source [ dcterms:references <https://host1.tb.geonovum.geolabs.fr/ogc-api/processes/SAGA.ta_morphometry.0> ;
+            dcterms:title "ZOO-Project Geonovum testbed -- SAGA.ta_morphometry.0: Slope, Aspect, Curvature" ],
+        [ dcterms:references <https://saga-gis.sourceforge.io/saga_tool_doc/7.3.0/ta_morphometry_0.html> ;
             dcterms:title "SAGA 7.3.0 -- Slope, Aspect, Curvature" ],
-        [ dcterms:title "Zevenbergen, L.W., Thorne, C.R. (1987): Quantitative analysis of land surface topography. Earth Surface Processes and Landforms, 12: 47-56" ],
-        [ dcterms:references <https://host1.tb.geonovum.geolabs.fr/ogc-api/processes/SAGA.ta_morphometry.0> ;
-            dcterms:title "ZOO-Project Geonovum testbed -- SAGA.ta_morphometry.0: Slope, Aspect, Curvature" ] ;
+        [ dcterms:title "Zevenbergen, L.W., Thorne, C.R. (1987): Quantitative analysis of land surface topography. Earth Surface Processes and Landforms, 12: 47-56" ] ;
     skos:definition "The slope gradient of an elevation model at each cell, from a local fit of the surface (SAGA's default method: the 9 parameter 2nd order polynom of Zevenbergen & Thorne 1987)." ;
     skos:inScheme gp:implementation-profile ;
     skos:prefLabel "Slope" ;

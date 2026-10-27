@@ -3,7 +3,7 @@
   "description": "The Concept \"Terrain Analysis\" -- see generic-profiles.concept for the general shape every Concept shares.",
   "allOf": [
     {
-      "$ref": "https://geolabs.github.io/bblocks-generic-profiles/build/annotated/concept/schema.json"
+      "$ref": "https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/concept/schema.json"
     },
     {
       "type": "object",
@@ -47,5 +47,11 @@
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "gp": "https://geolabs.github.io/bblocks-generic-profiles/def/",
     "dct": "http://purl.org/dc/terms/"
+  },
+  "x-bblocks-metadata": {
+    "itemIdentifier": "generic-profiles.concept.terrain-analysis",
+    "register": "https://gfenoy.github.io/bblocks-generic-profiles/build/register.json",
+    "version": "0.1",
+    "dateOfLastChange": "2026-10-09"
   }
 }

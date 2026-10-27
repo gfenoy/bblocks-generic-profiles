@@ -162,7 +162,7 @@ in `bblocks-process-profiles` -- a real process of the ZOO-Project Geonovum test
 #### jsonld
 ```jsonld
 {
-  "@context": "https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/contains/context.jsonld",
+  "@context": "https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/contains/context.jsonld",
   "id": "https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/contains",
   "type": "ImplementationProfile",
   "prefLabel": "Contains",
@@ -264,22 +264,22 @@ in `bblocks-process-profiles` -- a real process of the ZOO-Project Geonovum test
 ```ttl
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix gp: <https://geolabs.github.io/bblocks-generic-profiles/def/> .
-@prefix ns1: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/outputs/> .
+@prefix ns1: <https://w3id.org/ogc/api/schema/> .
 @prefix ns2: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/inputs/> .
-@prefix ns3: <https://w3id.org/ogc/api/schema/> .
+@prefix ns3: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/outputs/> .
 @prefix proc: <https://w3id.org/ogc/api/processes/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/contains> a skos:Concept ;
-    dcterms:source [ dcterms:references <https://www.ogc.org/standards/sfa/> ;
-            dcterms:title "OGC 06-103r4 Simple Feature Access - Part 1: Common Architecture, §6.1.19" ],
-        [ dcterms:title "ISO/IEC 13249-3:2016 Information technology -- Database languages -- SQL multimedia and application packages -- Part 3: Spatial, §5.1.11 ST_Contains" ] ;
+    dcterms:source [ dcterms:title "ISO/IEC 13249-3:2016 Information technology -- Database languages -- SQL multimedia and application packages -- Part 3: Spatial, §5.1.11 ST_Contains" ],
+        [ dcterms:references <https://www.ogc.org/standards/sfa/> ;
+            dcterms:title "OGC 06-103r4 Simple Feature Access - Part 1: Common Architecture, §6.1.19" ] ;
     skos:definition "Returns TRUE if this geometric object spatially contains anotherGeometry (no point of anotherGeometry lies outside this geometric object, and at least one point of the interior of anotherGeometry lies in the interior of this geometric object)." ;
     skos:inScheme gp:implementation-profile ;
     skos:prefLabel "Contains" ;
     gp:inputs [ ns2:geometry1 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/contains/inputs/geometry1> ;
             ns2:geometry2 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/contains/inputs/geometry2> ] ;
-    gp:outputs [ ns1:result <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/contains/outputs/result> ] ;
+    gp:outputs [ ns3:result <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/contains/outputs/result> ] ;
     gp:refinesGenericProfile <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/binary-spatial-predicate> ;
     gp:status "submitted" ;
     proc:keywords "Contains",
@@ -288,12 +288,12 @@ in `bblocks-process-profiles` -- a real process of the ZOO-Project Geonovum test
         "predicate",
         "spatial relation",
         "vector" ;
-    proc:metadata [ dcterms:title "Generic Profile: Binary spatial predicate" ;
-            proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/binary-spatial-predicate> ;
-            proc:role <http://www.opengis.net/spec/wps/2.0/def/process-profile/generic> ],
-        [ dcterms:title "Process Concept: Vector Geometry Processing" ;
+    proc:metadata [ dcterms:title "Process Concept: Vector Geometry Processing" ;
             proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/concept/vector-geometry-processing> ;
-            proc:role <http://www.opengis.net/spec/wps/2.0/def/process-profile/concept> ] .
+            proc:role <http://www.opengis.net/spec/wps/2.0/def/process-profile/concept> ],
+        [ dcterms:title "Generic Profile: Binary spatial predicate" ;
+            proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/binary-spatial-predicate> ;
+            proc:role <http://www.opengis.net/spec/wps/2.0/def/process-profile/generic> ] .
 
 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/contains/inputs/geometry1> dcterms:type <https://geolabs.github.io/bblocks-generic-profiles/def/data-type/geometry> ;
     proc:keywords "GML",
@@ -301,9 +301,9 @@ in `bblocks-process-profiles` -- a real process of the ZOO-Project Geonovum test
     proc:metadata [ dcterms:title "Generic Profile: Binary spatial predicate -- input `geometry1`" ;
             proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/binary-spatial-predicate/inputs/geometry1> ;
             proc:role <https://geolabs.github.io/bblocks-generic-profiles/def/role/generic-input> ] ;
-    proc:schema [ a ns3:string ;
-            ns3:contentMediaType "text/xml" ;
-            ns3:description "GML" ] .
+    proc:schema [ a ns1:string ;
+            ns1:contentMediaType "text/xml" ;
+            ns1:description "GML" ] .
 
 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/contains/inputs/geometry2> dcterms:type <https://geolabs.github.io/bblocks-generic-profiles/def/data-type/geometry> ;
     proc:keywords "GML",
@@ -311,9 +311,9 @@ in `bblocks-process-profiles` -- a real process of the ZOO-Project Geonovum test
     proc:metadata [ dcterms:title "Generic Profile: Binary spatial predicate -- input `geometry2`" ;
             proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/binary-spatial-predicate/inputs/geometry2> ;
             proc:role <https://geolabs.github.io/bblocks-generic-profiles/def/role/generic-input> ] ;
-    proc:schema [ a ns3:string ;
-            ns3:contentMediaType "text/xml" ;
-            ns3:description "GML" ] .
+    proc:schema [ a ns1:string ;
+            ns1:contentMediaType "text/xml" ;
+            ns1:description "GML" ] .
 
 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/contains/outputs/result> dcterms:type <https://geolabs.github.io/bblocks-generic-profiles/def/data-type/boolean> ;
     proc:keywords "boolean" ;
@@ -331,7 +331,7 @@ $schema: https://json-schema.org/draft/2020-12/schema
 description: The Implementation Profile "Contains" -- see generic-profiles.implementation-profile
   for the general shape every Implementation Profile shares.
 allOf:
-- $ref: https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/schema.yaml
+- $ref: https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/schema.yaml
 - type: object
   properties:
     id:
@@ -519,13 +519,18 @@ x-jsonld-prefixes:
   gp: https://geolabs.github.io/bblocks-generic-profiles/def/
   proc: https://w3id.org/ogc/api/processes/
   dct: http://purl.org/dc/terms/
+x-bblocks-metadata:
+  itemIdentifier: generic-profiles.implementation-profile.contains
+  register: https://gfenoy.github.io/bblocks-generic-profiles/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-10-09'
 
 ```
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/contains/schema.json)
-* JSON version: [schema.json](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/contains/schema.yaml)
+* YAML version: [schema.yaml](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/contains/schema.json)
+* JSON version: [schema.json](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/contains/schema.yaml)
 
 
 # JSON-LD Context
@@ -610,7 +615,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/contains/context.jsonld)
+[context.jsonld](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/contains/context.jsonld)
 
 ## Sources
 
@@ -621,6 +626,6 @@ You can find the full JSON-LD context here:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/GeoLabs/bblocks-generic-profiles](https://github.com/GeoLabs/bblocks-generic-profiles)
+* URL: [https://github.com/gfenoy/bblocks-generic-profiles](https://github.com/gfenoy/bblocks-generic-profiles)
 * Path: `_sources/implementation-profile/contains`
 

@@ -1,5 +1,5 @@
 Validation report for generic-profiles.generic-profile.point-cloud-rasterization - Generic Profile: Point cloud rasterization
-Generated 2026-10-09T10:07:59.157726+00:00
+Generated 2026-10-27T13:10:44.886486+00:00
 === Files ===
 Using examples/point-cloud-rasterization.json from examples
 JSON-LD context is present - uplifting

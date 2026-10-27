@@ -205,7 +205,7 @@ this register: see `ospd.process-profiles.raster.band-math-multiband` in
 #### jsonld
 ```jsonld
 {
-  "@context": "https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/raster-band-math-multiband/context.jsonld",
+  "@context": "https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/raster-band-math-multiband/context.jsonld",
   "id": "https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-band-math-multiband",
   "type": "ImplementationProfile",
   "prefLabel": "Raster band math (multi-band output)",
@@ -315,8 +315,8 @@ this register: see `ospd.process-profiles.raster.band-math-multiband` in
 ```ttl
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix gp: <https://geolabs.github.io/bblocks-generic-profiles/def/> .
-@prefix ns1: <https://w3id.org/ogc/api/schema/> .
-@prefix ns2: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/outputs/> .
+@prefix ns1: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/outputs/> .
+@prefix ns2: <https://w3id.org/ogc/api/schema/> .
 @prefix ns3: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/inputs/> .
 @prefix proc: <https://w3id.org/ogc/api/processes/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -333,7 +333,7 @@ this register: see `ospd.process-profiles.raster.band-math-multiband` in
     skos:prefLabel "Raster band math (multi-band output)" ;
     gp:inputs [ ns3:expression <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-band-math-multiband/inputs/expression> ;
             ns3:rasters <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-band-math-multiband/inputs/rasters> ] ;
-    gp:outputs [ ns2:raster <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-band-math-multiband/outputs/raster> ] ;
+    gp:outputs [ ns1:raster <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-band-math-multiband/outputs/raster> ] ;
     gp:refinesGenericProfile <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-band-math> ;
     gp:status "submitted" ;
     proc:keywords "BandMathX",
@@ -362,10 +362,10 @@ this register: see `ospd.process-profiles.raster.band-math-multiband` in
     proc:metadata [ dcterms:title "Generic Profile: Raster band math -- input `rasters`" ;
             proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-band-math/inputs/rasters> ;
             proc:role <https://geolabs.github.io/bblocks-generic-profiles/def/role/generic-input> ] ;
-    proc:schema [ a ns1:string ;
-            ns1:contentEncoding "base64" ;
-            ns1:contentMediaType "image/tiff" ;
-            ns1:description "GeoTIFF" ] .
+    proc:schema [ a ns2:string ;
+            ns2:contentEncoding "base64" ;
+            ns2:contentMediaType "image/tiff" ;
+            ns2:description "GeoTIFF" ] .
 
 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-band-math-multiband/outputs/raster> dcterms:type <https://geolabs.github.io/bblocks-generic-profiles/def/data-type/raster> ;
     proc:keywords "GeoTIFF",
@@ -373,10 +373,10 @@ this register: see `ospd.process-profiles.raster.band-math-multiband` in
     proc:metadata [ dcterms:title "Generic Profile: Raster band math -- output `raster`" ;
             proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-band-math/outputs/raster> ;
             proc:role <https://geolabs.github.io/bblocks-generic-profiles/def/role/generic-output> ] ;
-    proc:schema [ a ns1:string ;
-            ns1:contentEncoding "base64" ;
-            ns1:contentMediaType "image/tiff" ;
-            ns1:description "GeoTIFF" ] .
+    proc:schema [ a ns2:string ;
+            ns2:contentEncoding "base64" ;
+            ns2:contentMediaType "image/tiff" ;
+            ns2:description "GeoTIFF" ] .
 
 
 ```
@@ -389,7 +389,7 @@ description: The Implementation Profile "Raster band math (multi-band output)" -
   see generic-profiles.implementation-profile for the general shape every Implementation
   Profile shares.
 allOf:
-- $ref: https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/schema.yaml
+- $ref: https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/schema.yaml
 - type: object
   properties:
     id:
@@ -575,13 +575,18 @@ x-jsonld-prefixes:
   gp: https://geolabs.github.io/bblocks-generic-profiles/def/
   proc: https://w3id.org/ogc/api/processes/
   dct: http://purl.org/dc/terms/
+x-bblocks-metadata:
+  itemIdentifier: generic-profiles.implementation-profile.raster-band-math-multiband
+  register: https://gfenoy.github.io/bblocks-generic-profiles/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-10-09'
 
 ```
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/raster-band-math-multiband/schema.json)
-* JSON version: [schema.json](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/raster-band-math-multiband/schema.yaml)
+* YAML version: [schema.yaml](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/raster-band-math-multiband/schema.json)
+* JSON version: [schema.json](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/raster-band-math-multiband/schema.yaml)
 
 
 # JSON-LD Context
@@ -666,7 +671,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/raster-band-math-multiband/context.jsonld)
+[context.jsonld](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/raster-band-math-multiband/context.jsonld)
 
 ## Sources
 
@@ -678,6 +683,6 @@ You can find the full JSON-LD context here:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/GeoLabs/bblocks-generic-profiles](https://github.com/GeoLabs/bblocks-generic-profiles)
+* URL: [https://github.com/gfenoy/bblocks-generic-profiles](https://github.com/gfenoy/bblocks-generic-profiles)
 * Path: `_sources/implementation-profile/raster-band-math-multiband`
 

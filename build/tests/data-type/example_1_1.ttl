@@ -25,10 +25,10 @@
     skos:prefLabel "Curve" .
 
 <https://geolabs.github.io/bblocks-generic-profiles/def/data-type/elevation-model> a skos:Concept ;
-    dcterms:source [ dcterms:references <https://saga-gis.sourceforge.io/saga_tool_doc/7.3.0/ta_morphometry.html> ;
-            dcterms:title "SAGA 7.3.0 Terrain Analysis tools, `Elevation` grid inputs" ],
-        [ dcterms:references <https://docs.ogc.org/is/09-146r8/09-146r8.html> ;
-            dcterms:title "OGC 09-146r8 Coverage Implementation Schema (CIS) 1.1.1, §6.5 RangeType" ] ;
+    dcterms:source [ dcterms:references <https://docs.ogc.org/is/09-146r8/09-146r8.html> ;
+            dcterms:title "OGC 09-146r8 Coverage Implementation Schema (CIS) 1.1.1, §6.5 RangeType" ],
+        [ dcterms:references <https://saga-gis.sourceforge.io/saga_tool_doc/7.3.0/ta_morphometry.html> ;
+            dcterms:title "SAGA 7.3.0 Terrain Analysis tools, `Elevation` grid inputs" ] ;
     skos:broader <https://geolabs.github.io/bblocks-generic-profiles/def/data-type/raster-single-band> ;
     skos:definition "A single-band raster whose values are elevations of the terrain or of a surface (DEM, DTM, DSM)." ;
     skos:inScheme gp:data-type ;

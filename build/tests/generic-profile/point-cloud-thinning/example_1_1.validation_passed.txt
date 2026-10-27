@@ -1,5 +1,5 @@
 Validation report for generic-profiles.generic-profile.point-cloud-thinning - Generic Profile: Point cloud thinning
-Generated 2026-10-09T10:07:59.201029+00:00
+Generated 2026-10-27T13:10:44.939955+00:00
 === Files ===
 Using examples/point-cloud-thinning.json from examples
 JSON-LD context is present - uplifting

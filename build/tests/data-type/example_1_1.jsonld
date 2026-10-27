@@ -1,5 +1,5 @@
 {
-  "@context": "https://geolabs.github.io/bblocks-generic-profiles/build/annotated/data-type/context.jsonld",
+  "@context": "https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/data-type/context.jsonld",
   "id": "https://geolabs.github.io/bblocks-generic-profiles/def/data-type",
   "type": "ConceptScheme",
   "prefLabel": "Data types",

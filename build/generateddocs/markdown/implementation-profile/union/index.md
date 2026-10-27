@@ -166,7 +166,7 @@ in `bblocks-process-profiles` -- a real process of the ZOO-Project Geonovum test
 #### jsonld
 ```jsonld
 {
-  "@context": "https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/union/context.jsonld",
+  "@context": "https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/union/context.jsonld",
   "id": "https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/union",
   "type": "ImplementationProfile",
   "prefLabel": "Union",
@@ -274,21 +274,21 @@ in `bblocks-process-profiles` -- a real process of the ZOO-Project Geonovum test
 ```ttl
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix gp: <https://geolabs.github.io/bblocks-generic-profiles/def/> .
-@prefix ns1: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/inputs/> .
-@prefix ns2: <https://w3id.org/ogc/api/schema/> .
+@prefix ns1: <https://w3id.org/ogc/api/schema/> .
+@prefix ns2: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/inputs/> .
 @prefix ns3: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/outputs/> .
 @prefix proc: <https://w3id.org/ogc/api/processes/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/union> a skos:Concept ;
-    dcterms:source [ dcterms:references <https://www.ogc.org/standards/sfa/> ;
-            dcterms:title "OGC 06-103r4 Simple Feature Access - Part 1: Common Architecture, §6.1.25" ],
-        [ dcterms:title "ISO/IEC 13249-3:2016 Information technology -- Database languages -- SQL multimedia and application packages -- Part 3: Spatial, §5.1.53 ST_Union" ] ;
+    dcterms:source [ dcterms:title "ISO/IEC 13249-3:2016 Information technology -- Database languages -- SQL multimedia and application packages -- Part 3: Spatial, §5.1.53 ST_Union" ],
+        [ dcterms:references <https://www.ogc.org/standards/sfa/> ;
+            dcterms:title "OGC 06-103r4 Simple Feature Access - Part 1: Common Architecture, §6.1.25" ] ;
     skos:definition "Returns a geometric object representing the point set union of this geometric object with anotherGeometry." ;
     skos:inScheme gp:implementation-profile ;
     skos:prefLabel "Union" ;
-    gp:inputs [ ns1:geometry1 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/union/inputs/geometry1> ;
-            ns1:geometry2 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/union/inputs/geometry2> ] ;
+    gp:inputs [ ns2:geometry1 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/union/inputs/geometry1> ;
+            ns2:geometry2 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/union/inputs/geometry2> ] ;
     gp:outputs [ ns3:result <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/union/outputs/result> ] ;
     gp:refinesGenericProfile <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/binary-spatial-operation> ;
     gp:status "submitted" ;
@@ -311,9 +311,9 @@ in `bblocks-process-profiles` -- a real process of the ZOO-Project Geonovum test
     proc:metadata [ dcterms:title "Generic Profile: Binary spatial set operation -- input `geometry1`" ;
             proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/binary-spatial-operation/inputs/geometry1> ;
             proc:role <https://geolabs.github.io/bblocks-generic-profiles/def/role/generic-input> ] ;
-    proc:schema [ a ns2:string ;
-            ns2:contentMediaType "text/xml" ;
-            ns2:description "GML" ] .
+    proc:schema [ a ns1:string ;
+            ns1:contentMediaType "text/xml" ;
+            ns1:description "GML" ] .
 
 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/union/inputs/geometry2> dcterms:type <https://geolabs.github.io/bblocks-generic-profiles/def/data-type/geometry> ;
     proc:keywords "GML",
@@ -321,9 +321,9 @@ in `bblocks-process-profiles` -- a real process of the ZOO-Project Geonovum test
     proc:metadata [ dcterms:title "Generic Profile: Binary spatial set operation -- input `geometry2`" ;
             proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/binary-spatial-operation/inputs/geometry2> ;
             proc:role <https://geolabs.github.io/bblocks-generic-profiles/def/role/generic-input> ] ;
-    proc:schema [ a ns2:string ;
-            ns2:contentMediaType "text/xml" ;
-            ns2:description "GML" ] .
+    proc:schema [ a ns1:string ;
+            ns1:contentMediaType "text/xml" ;
+            ns1:description "GML" ] .
 
 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/union/outputs/result> dcterms:type <https://geolabs.github.io/bblocks-generic-profiles/def/data-type/geometry> ;
     proc:keywords "GML",
@@ -331,9 +331,9 @@ in `bblocks-process-profiles` -- a real process of the ZOO-Project Geonovum test
     proc:metadata [ dcterms:title "Generic Profile: Binary spatial set operation -- output `result`" ;
             proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/binary-spatial-operation/outputs/result> ;
             proc:role <https://geolabs.github.io/bblocks-generic-profiles/def/role/generic-output> ] ;
-    proc:schema [ a ns2:string ;
-            ns2:contentMediaType "text/xml" ;
-            ns2:description "GML" ] .
+    proc:schema [ a ns1:string ;
+            ns1:contentMediaType "text/xml" ;
+            ns1:description "GML" ] .
 
 
 ```
@@ -345,7 +345,7 @@ $schema: https://json-schema.org/draft/2020-12/schema
 description: The Implementation Profile "Union" -- see generic-profiles.implementation-profile
   for the general shape every Implementation Profile shares.
 allOf:
-- $ref: https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/schema.yaml
+- $ref: https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/schema.yaml
 - type: object
   properties:
     id:
@@ -533,13 +533,18 @@ x-jsonld-prefixes:
   gp: https://geolabs.github.io/bblocks-generic-profiles/def/
   proc: https://w3id.org/ogc/api/processes/
   dct: http://purl.org/dc/terms/
+x-bblocks-metadata:
+  itemIdentifier: generic-profiles.implementation-profile.union
+  register: https://gfenoy.github.io/bblocks-generic-profiles/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-10-09'
 
 ```
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/union/schema.json)
-* JSON version: [schema.json](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/union/schema.yaml)
+* YAML version: [schema.yaml](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/union/schema.json)
+* JSON version: [schema.json](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/union/schema.yaml)
 
 
 # JSON-LD Context
@@ -624,7 +629,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/union/context.jsonld)
+[context.jsonld](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/union/context.jsonld)
 
 ## Sources
 
@@ -635,6 +640,6 @@ You can find the full JSON-LD context here:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/GeoLabs/bblocks-generic-profiles](https://github.com/GeoLabs/bblocks-generic-profiles)
+* URL: [https://github.com/gfenoy/bblocks-generic-profiles](https://github.com/gfenoy/bblocks-generic-profiles)
 * Path: `_sources/implementation-profile/union`
 

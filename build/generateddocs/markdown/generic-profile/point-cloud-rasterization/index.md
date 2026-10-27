@@ -102,7 +102,7 @@ Implementation Profile -> Implementation (instance level).
 #### jsonld
 ```jsonld
 {
-  "@context": "https://geolabs.github.io/bblocks-generic-profiles/build/annotated/generic-profile/point-cloud-rasterization/context.jsonld",
+  "@context": "https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/generic-profile/point-cloud-rasterization/context.jsonld",
   "id": "https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/point-cloud-rasterization",
   "type": "GenericProfile",
   "prefLabel": "Point cloud rasterization",
@@ -162,8 +162,8 @@ Implementation Profile -> Implementation (instance level).
 ```ttl
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix gp: <https://geolabs.github.io/bblocks-generic-profiles/def/> .
-@prefix ns1: <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/outputs/> .
-@prefix ns2: <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/inputs/> .
+@prefix ns1: <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/inputs/> .
+@prefix ns2: <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/outputs/> .
 @prefix proc: <https://w3id.org/ogc/api/processes/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
@@ -172,9 +172,9 @@ Implementation Profile -> Implementation (instance level).
     skos:definition "Converts a point cloud to a raster on a grid of a given cell size. One point cloud and one cell size in, one raster out." ;
     skos:inScheme gp:generic-profile ;
     skos:prefLabel "Point cloud rasterization" ;
-    gp:inputs [ ns2:cellSize <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/point-cloud-rasterization/inputs/cellSize> ;
-            ns2:points <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/point-cloud-rasterization/inputs/points> ] ;
-    gp:outputs [ ns1:result <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/point-cloud-rasterization/outputs/result> ] ;
+    gp:inputs [ ns1:cellSize <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/point-cloud-rasterization/inputs/cellSize> ;
+            ns1:points <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/point-cloud-rasterization/inputs/points> ] ;
+    gp:outputs [ ns2:result <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/point-cloud-rasterization/outputs/result> ] ;
     gp:status "submitted" ;
     proc:keywords "point cloud",
         "raster",
@@ -208,7 +208,7 @@ $schema: https://json-schema.org/draft/2020-12/schema
 description: The Generic Profile "Point cloud rasterization" -- see generic-profiles.generic-profile
   for the general shape every Generic Profile shares.
 allOf:
-- $ref: https://geolabs.github.io/bblocks-generic-profiles/build/annotated/generic-profile/schema.yaml
+- $ref: https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/generic-profile/schema.yaml
 - type: object
   properties:
     id:
@@ -301,13 +301,18 @@ x-jsonld-prefixes:
   gp: https://geolabs.github.io/bblocks-generic-profiles/def/
   proc: https://w3id.org/ogc/api/processes/
   dct: http://purl.org/dc/terms/
+x-bblocks-metadata:
+  itemIdentifier: generic-profiles.generic-profile.point-cloud-rasterization
+  register: https://gfenoy.github.io/bblocks-generic-profiles/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-10-09'
 
 ```
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/generic-profile/point-cloud-rasterization/schema.json)
-* JSON version: [schema.json](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/generic-profile/point-cloud-rasterization/schema.yaml)
+* YAML version: [schema.yaml](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/generic-profile/point-cloud-rasterization/schema.json)
+* JSON version: [schema.json](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/generic-profile/point-cloud-rasterization/schema.yaml)
 
 
 # JSON-LD Context
@@ -384,7 +389,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/generic-profile/point-cloud-rasterization/context.jsonld)
+[context.jsonld](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/generic-profile/point-cloud-rasterization/context.jsonld)
 
 ## Sources
 
@@ -394,6 +399,6 @@ You can find the full JSON-LD context here:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/GeoLabs/bblocks-generic-profiles](https://github.com/GeoLabs/bblocks-generic-profiles)
+* URL: [https://github.com/gfenoy/bblocks-generic-profiles](https://github.com/gfenoy/bblocks-generic-profiles)
 * Path: `_sources/generic-profile/point-cloud-rasterization`
 

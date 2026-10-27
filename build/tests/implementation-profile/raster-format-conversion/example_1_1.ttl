@@ -24,12 +24,12 @@
         "format conversion",
         "gdal_translate",
         "raster" ;
-    proc:metadata [ dcterms:title "Process Concept: Raster Coverage Processing" ;
-            proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/concept/raster-coverage-processing> ;
-            proc:role <http://www.opengis.net/spec/wps/2.0/def/process-profile/concept> ],
-        [ dcterms:title "Generic Profile: Raster format conversion" ;
+    proc:metadata [ dcterms:title "Generic Profile: Raster format conversion" ;
             proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-format-conversion> ;
-            proc:role <http://www.opengis.net/spec/wps/2.0/def/process-profile/generic> ] .
+            proc:role <http://www.opengis.net/spec/wps/2.0/def/process-profile/generic> ],
+        [ dcterms:title "Process Concept: Raster Coverage Processing" ;
+            proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/concept/raster-coverage-processing> ;
+            proc:role <http://www.opengis.net/spec/wps/2.0/def/process-profile/concept> ] .
 
 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-format-conversion/inputs/raster> dcterms:type <https://geolabs.github.io/bblocks-generic-profiles/def/data-type/raster> ;
     proc:keywords "GeoTIFF",

@@ -1,5 +1,5 @@
 {
-  "@context": "https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/point-cloud-to-grid/context.jsonld",
+  "@context": "https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/point-cloud-to-grid/context.jsonld",
   "id": "https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/point-cloud-to-grid",
   "type": "ImplementationProfile",
   "prefLabel": "Point cloud to grid",

@@ -1,5 +1,5 @@
 Validation report for generic-profiles.generic-profile.point-cloud-to-features - Generic Profile: Point cloud to features
-Generated 2026-10-09T10:07:59.242910+00:00
+Generated 2026-10-27T13:10:45.020845+00:00
 === Files ===
 Using examples/point-cloud-to-features.json from examples
 JSON-LD context is present - uplifting

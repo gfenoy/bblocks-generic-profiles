@@ -91,7 +91,7 @@ not part of this register -- see `ospd.process-profiles.*` in `bblocks-process-p
 #### jsonld
 ```jsonld
 {
-  "@context": "https://geolabs.github.io/bblocks-generic-profiles/build/annotated/concept/raster-coverage-processing/context.jsonld",
+  "@context": "https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/concept/raster-coverage-processing/context.jsonld",
   "id": "https://geolabs.github.io/bblocks-generic-profiles/def/concept/raster-coverage-processing",
   "type": "Concept",
   "prefLabel": "Raster Coverage Processing",
@@ -139,7 +139,7 @@ $schema: https://json-schema.org/draft/2020-12/schema
 description: The Concept "Raster Coverage Processing" -- see generic-profiles.concept
   for the general shape every Concept shares.
 allOf:
-- $ref: https://geolabs.github.io/bblocks-generic-profiles/build/annotated/concept/schema.yaml
+- $ref: https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/concept/schema.yaml
 - type: object
   properties:
     id:
@@ -171,13 +171,18 @@ x-jsonld-prefixes:
   skos: http://www.w3.org/2004/02/skos/core#
   gp: https://geolabs.github.io/bblocks-generic-profiles/def/
   dct: http://purl.org/dc/terms/
+x-bblocks-metadata:
+  itemIdentifier: generic-profiles.concept.raster-coverage-processing
+  register: https://gfenoy.github.io/bblocks-generic-profiles/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-10-09'
 
 ```
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/concept/raster-coverage-processing/schema.json)
-* JSON version: [schema.json](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/concept/raster-coverage-processing/schema.yaml)
+* YAML version: [schema.yaml](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/concept/raster-coverage-processing/schema.json)
+* JSON version: [schema.json](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/concept/raster-coverage-processing/schema.yaml)
 
 
 # JSON-LD Context
@@ -215,7 +220,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/concept/raster-coverage-processing/context.jsonld)
+[context.jsonld](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/concept/raster-coverage-processing/context.jsonld)
 
 ## Sources
 
@@ -225,6 +230,6 @@ You can find the full JSON-LD context here:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/GeoLabs/bblocks-generic-profiles](https://github.com/GeoLabs/bblocks-generic-profiles)
+* URL: [https://github.com/gfenoy/bblocks-generic-profiles](https://github.com/gfenoy/bblocks-generic-profiles)
 * Path: `_sources/concept/raster-coverage-processing`
 

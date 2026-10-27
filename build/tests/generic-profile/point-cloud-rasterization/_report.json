@@ -2,7 +2,7 @@
   "title": "Validation report for generic-profiles.generic-profile.point-cloud-rasterization - Generic Profile: Point cloud rasterization",
   "bblockName": "Generic Profile: Point cloud rasterization",
   "bblockId": "generic-profiles.generic-profile.point-cloud-rasterization",
-  "generated": "2026-10-09T10:07:59.157795+00:00",
+  "generated": "2026-10-27T13:10:44.886550+00:00",
   "result": true,
   "items": [
     {
@@ -10,7 +10,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/generic-profile/point-cloud-rasterization/example_1_1.json",
-        "url": "https://geolabs.github.io/bblocks-generic-profiles/build/tests/generic-profile/point-cloud-rasterization/example_1_1.json",
+        "url": "https://gfenoy.github.io/bblocks-generic-profiles/build/tests/generic-profile/point-cloud-rasterization/example_1_1.json",
         "exampleIndex": 1,
         "snippetIndex": 1,
         "language": "application/json"

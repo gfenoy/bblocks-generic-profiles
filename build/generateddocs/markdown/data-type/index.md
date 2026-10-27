@@ -277,7 +277,7 @@ point clouds, SAGA's tool libraries where no standard was found).
 #### jsonld
 ```jsonld
 {
-  "@context": "https://geolabs.github.io/bblocks-generic-profiles/build/annotated/data-type/context.jsonld",
+  "@context": "https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/data-type/context.jsonld",
   "id": "https://geolabs.github.io/bblocks-generic-profiles/def/data-type",
   "type": "ConceptScheme",
   "prefLabel": "Data types",
@@ -533,10 +533,10 @@ point clouds, SAGA's tool libraries where no standard was found).
     skos:prefLabel "Curve" .
 
 <https://geolabs.github.io/bblocks-generic-profiles/def/data-type/elevation-model> a skos:Concept ;
-    dcterms:source [ dcterms:references <https://saga-gis.sourceforge.io/saga_tool_doc/7.3.0/ta_morphometry.html> ;
-            dcterms:title "SAGA 7.3.0 Terrain Analysis tools, `Elevation` grid inputs" ],
-        [ dcterms:references <https://docs.ogc.org/is/09-146r8/09-146r8.html> ;
-            dcterms:title "OGC 09-146r8 Coverage Implementation Schema (CIS) 1.1.1, §6.5 RangeType" ] ;
+    dcterms:source [ dcterms:references <https://docs.ogc.org/is/09-146r8/09-146r8.html> ;
+            dcterms:title "OGC 09-146r8 Coverage Implementation Schema (CIS) 1.1.1, §6.5 RangeType" ],
+        [ dcterms:references <https://saga-gis.sourceforge.io/saga_tool_doc/7.3.0/ta_morphometry.html> ;
+            dcterms:title "SAGA 7.3.0 Terrain Analysis tools, `Elevation` grid inputs" ] ;
     skos:broader <https://geolabs.github.io/bblocks-generic-profiles/def/data-type/raster-single-band> ;
     skos:definition "A single-band raster whose values are elevations of the terrain or of a surface (DEM, DTM, DSM)." ;
     skos:inScheme gp:data-type ;
@@ -724,13 +724,18 @@ x-jsonld-prefixes:
   skos: http://www.w3.org/2004/02/skos/core#
   dct: http://purl.org/dc/terms/
   gp: https://geolabs.github.io/bblocks-generic-profiles/def/
+x-bblocks-metadata:
+  itemIdentifier: generic-profiles.data-type
+  register: https://gfenoy.github.io/bblocks-generic-profiles/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-10-09'
 
 ```
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/data-type/schema.json)
-* JSON version: [schema.json](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/data-type/schema.yaml)
+* YAML version: [schema.yaml](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/data-type/schema.json)
+* JSON version: [schema.json](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/data-type/schema.yaml)
 
 
 # JSON-LD Context
@@ -773,7 +778,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/data-type/context.jsonld)
+[context.jsonld](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/data-type/context.jsonld)
 
 ## Sources
 
@@ -785,6 +790,6 @@ You can find the full JSON-LD context here:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/GeoLabs/bblocks-generic-profiles](https://github.com/GeoLabs/bblocks-generic-profiles)
+* URL: [https://github.com/gfenoy/bblocks-generic-profiles](https://github.com/gfenoy/bblocks-generic-profiles)
 * Path: `_sources/data-type`
 

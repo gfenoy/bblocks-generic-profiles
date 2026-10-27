@@ -1,5 +1,5 @@
 {
-  "@context": "https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/terrain-ruggedness-index/context.jsonld",
+  "@context": "https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/terrain-ruggedness-index/context.jsonld",
   "id": "https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/terrain-ruggedness-index",
   "type": "ImplementationProfile",
   "prefLabel": "Terrain ruggedness index",

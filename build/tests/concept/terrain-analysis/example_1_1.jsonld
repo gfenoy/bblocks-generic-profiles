@@ -1,5 +1,5 @@
 {
-  "@context": "https://geolabs.github.io/bblocks-generic-profiles/build/annotated/concept/terrain-analysis/context.jsonld",
+  "@context": "https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/concept/terrain-analysis/context.jsonld",
   "id": "https://geolabs.github.io/bblocks-generic-profiles/def/concept/terrain-analysis",
   "type": "Concept",
   "prefLabel": "Terrain Analysis",

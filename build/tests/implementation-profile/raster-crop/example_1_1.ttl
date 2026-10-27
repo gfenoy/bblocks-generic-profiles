@@ -1,9 +1,9 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix gp: <https://geolabs.github.io/bblocks-generic-profiles/def/> .
-@prefix ns1: <https://w3id.org/ogc/api/schema/> .
-@prefix ns2: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/inputs/> .
-@prefix ns3: <https://w3id.org/ogc/api/schema/$> .
-@prefix ns4: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/outputs/> .
+@prefix ns1: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/inputs/> .
+@prefix ns2: <https://w3id.org/ogc/api/schema/> .
+@prefix ns3: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/outputs/> .
+@prefix ns4: <https://w3id.org/ogc/api/schema/$> .
 @prefix proc: <https://w3id.org/ogc/api/processes/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
@@ -17,9 +17,9 @@
     skos:definition "Extracts the pixels of a raster coverage that fall within a region of interest." ;
     skos:inScheme gp:implementation-profile ;
     skos:prefLabel "Raster crop" ;
-    gp:inputs [ ns2:areaOfInterest <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-crop/inputs/areaOfInterest> ;
-            ns2:raster <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-crop/inputs/raster> ] ;
-    gp:outputs [ ns4:raster <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-crop/outputs/raster> ] ;
+    gp:inputs [ ns1:areaOfInterest <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-crop/inputs/areaOfInterest> ;
+            ns1:raster <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-crop/inputs/raster> ] ;
+    gp:outputs [ ns3:raster <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-crop/outputs/raster> ] ;
     gp:refinesGenericProfile <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-crop> ;
     gp:status "submitted" ;
     proc:keywords "ExtractROI",
@@ -27,12 +27,12 @@
         "coverage",
         "crop",
         "raster" ;
-    proc:metadata [ dcterms:title "Process Concept: Raster Coverage Processing" ;
-            proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/concept/raster-coverage-processing> ;
-            proc:role <http://www.opengis.net/spec/wps/2.0/def/process-profile/concept> ],
-        [ dcterms:title "Generic Profile: Raster crop" ;
+    proc:metadata [ dcterms:title "Generic Profile: Raster crop" ;
             proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-crop> ;
-            proc:role <http://www.opengis.net/spec/wps/2.0/def/process-profile/generic> ] .
+            proc:role <http://www.opengis.net/spec/wps/2.0/def/process-profile/generic> ],
+        [ dcterms:title "Process Concept: Raster Coverage Processing" ;
+            proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/concept/raster-coverage-processing> ;
+            proc:role <http://www.opengis.net/spec/wps/2.0/def/process-profile/concept> ] .
 
 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-crop/inputs/areaOfInterest> dcterms:type <https://geolabs.github.io/bblocks-generic-profiles/def/data-type/bounding-box> ;
     proc:keywords "bbox",
@@ -40,7 +40,7 @@
     proc:metadata [ dcterms:title "Generic Profile: Raster crop -- input `areaOfInterest`" ;
             proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-crop/inputs/areaOfInterest> ;
             proc:role <https://geolabs.github.io/bblocks-generic-profiles/def/role/generic-input> ] ;
-    proc:schema [ ns3:ref "https://geolabs.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/bbox/schema.json" ] .
+    proc:schema [ ns4:ref "https://geolabs.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/bbox/schema.json" ] .
 
 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-crop/inputs/raster> dcterms:type <https://geolabs.github.io/bblocks-generic-profiles/def/data-type/raster> ;
     proc:keywords "GeoTIFF",
@@ -48,9 +48,9 @@
     proc:metadata [ dcterms:title "Generic Profile: Raster crop -- input `raster`" ;
             proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-crop/inputs/raster> ;
             proc:role <https://geolabs.github.io/bblocks-generic-profiles/def/role/generic-input> ] ;
-    proc:schema [ a ns1:string ;
-            ns1:contentEncoding "base64" ;
-            ns1:contentMediaType "image/tiff" ] .
+    proc:schema [ a ns2:string ;
+            ns2:contentEncoding "base64" ;
+            ns2:contentMediaType "image/tiff" ] .
 
 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-crop/outputs/raster> dcterms:type <https://geolabs.github.io/bblocks-generic-profiles/def/data-type/raster> ;
     proc:keywords "GeoTIFF",
@@ -58,7 +58,7 @@
     proc:metadata [ dcterms:title "Generic Profile: Raster crop -- output `raster`" ;
             proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-crop/outputs/raster> ;
             proc:role <https://geolabs.github.io/bblocks-generic-profiles/def/role/generic-output> ] ;
-    proc:schema [ a ns1:string ;
-            ns1:contentEncoding "base64" ;
-            ns1:contentMediaType "image/tiff" ] .
+    proc:schema [ a ns2:string ;
+            ns2:contentEncoding "base64" ;
+            ns2:contentMediaType "image/tiff" ] .
 

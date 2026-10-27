@@ -155,7 +155,7 @@ Implementation Profile -> Implementation (instance level).
 #### jsonld
 ```jsonld
 {
-  "@context": "https://geolabs.github.io/bblocks-generic-profiles/build/annotated/generic-profile/context.jsonld",
+  "@context": "https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/generic-profile/context.jsonld",
   "id": "https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/example-generic-profile",
   "type": "GenericProfile",
   "prefLabel": "Example Generic Profile (placeholder, not a real signature)",
@@ -204,8 +204,8 @@ Implementation Profile -> Implementation (instance level).
 ```ttl
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix gp: <https://geolabs.github.io/bblocks-generic-profiles/def/> .
-@prefix ns1: <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/inputs/> .
-@prefix ns2: <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/outputs/> .
+@prefix ns1: <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/outputs/> .
+@prefix ns2: <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/inputs/> .
 @prefix proc: <https://w3id.org/ogc/api/processes/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
@@ -214,8 +214,8 @@ Implementation Profile -> Implementation (instance level).
     skos:definition "Illustrates the shape of a Generic Profile entry only. Real Generic Profiles are each their own building block -- see generic-profiles.generic-profile.binary-spatial-predicate, .geometry-buffer and the other siblings for actual signatures." ;
     skos:inScheme gp:generic-profile ;
     skos:prefLabel "Example Generic Profile (placeholder, not a real signature)" ;
-    gp:inputs [ ns1:input1 <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/example-generic-profile/inputs/input1> ] ;
-    gp:outputs [ ns2:result <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/example-generic-profile/outputs/result> ] ;
+    gp:inputs [ ns2:input1 <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/example-generic-profile/inputs/input1> ] ;
+    gp:outputs [ ns1:result <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/example-generic-profile/outputs/result> ] ;
     gp:status "submitted" ;
     proc:keywords "example" ;
     proc:metadata [ dcterms:title "Process Concept: Vector Geometry Processing" ;
@@ -508,13 +508,18 @@ x-jsonld-prefixes:
   gp: https://geolabs.github.io/bblocks-generic-profiles/def/
   proc: https://w3id.org/ogc/api/processes/
   dct: http://purl.org/dc/terms/
+x-bblocks-metadata:
+  itemIdentifier: generic-profiles.generic-profile
+  register: https://gfenoy.github.io/bblocks-generic-profiles/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-10-09'
 
 ```
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/generic-profile/schema.json)
-* JSON version: [schema.json](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/generic-profile/schema.yaml)
+* YAML version: [schema.yaml](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/generic-profile/schema.json)
+* JSON version: [schema.json](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/generic-profile/schema.yaml)
 
 
 # JSON-LD Context
@@ -598,7 +603,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/generic-profile/context.jsonld)
+[context.jsonld](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/generic-profile/context.jsonld)
 
 ## Sources
 
@@ -608,6 +613,6 @@ You can find the full JSON-LD context here:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/GeoLabs/bblocks-generic-profiles](https://github.com/GeoLabs/bblocks-generic-profiles)
+* URL: [https://github.com/gfenoy/bblocks-generic-profiles](https://github.com/gfenoy/bblocks-generic-profiles)
 * Path: `_sources/generic-profile`
 

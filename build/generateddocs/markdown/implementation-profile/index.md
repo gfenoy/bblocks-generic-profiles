@@ -226,7 +226,7 @@ Third tier of the four-tier model (OGC 14-065 WPS 2.0.2 §7.5): Concept -> Gener
 #### jsonld
 ```jsonld
 {
-  "@context": "https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/context.jsonld",
+  "@context": "https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/context.jsonld",
   "id": "https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/example-implementation-profile",
   "type": "ImplementationProfile",
   "prefLabel": "Example Implementation Profile (placeholder, not a real operation)",
@@ -318,9 +318,9 @@ Third tier of the four-tier model (OGC 14-065 WPS 2.0.2 §7.5): Concept -> Gener
 ```ttl
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix gp: <https://geolabs.github.io/bblocks-generic-profiles/def/> .
-@prefix ns1: <https://w3id.org/ogc/api/schema/> .
-@prefix ns2: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/inputs/> .
-@prefix ns3: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/outputs/> .
+@prefix ns1: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/outputs/> .
+@prefix ns2: <https://w3id.org/ogc/api/schema/> .
+@prefix ns3: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/inputs/> .
 @prefix proc: <https://w3id.org/ogc/api/processes/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
@@ -328,9 +328,9 @@ Third tier of the four-tier model (OGC 14-065 WPS 2.0.2 §7.5): Concept -> Gener
     skos:definition "Illustrates the shape of an Implementation Profile entry only. Real ones are each their own building block -- see generic-profiles.implementation-profile.intersects, .buffer and the other siblings." ;
     skos:inScheme gp:implementation-profile ;
     skos:prefLabel "Example Implementation Profile (placeholder, not a real operation)" ;
-    gp:inputs [ ns2:geometry1 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/example-implementation-profile/inputs/geometry1> ;
-            ns2:geometry2 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/example-implementation-profile/inputs/geometry2> ] ;
-    gp:outputs [ ns3:result <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/example-implementation-profile/outputs/result> ] ;
+    gp:inputs [ ns3:geometry1 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/example-implementation-profile/inputs/geometry1> ;
+            ns3:geometry2 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/example-implementation-profile/inputs/geometry2> ] ;
+    gp:outputs [ ns1:result <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/example-implementation-profile/outputs/result> ] ;
     gp:refinesGenericProfile <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/binary-spatial-predicate> ;
     gp:status "submitted" ;
     proc:keywords "example",
@@ -351,9 +351,9 @@ Third tier of the four-tier model (OGC 14-065 WPS 2.0.2 §7.5): Concept -> Gener
     proc:metadata [ dcterms:title "Generic Profile: Binary spatial predicate -- input `geometry1`" ;
             proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/binary-spatial-predicate/inputs/geometry1> ;
             proc:role <https://geolabs.github.io/bblocks-generic-profiles/def/role/generic-input> ] ;
-    proc:schema [ a ns1:string ;
-            ns1:contentMediaType "text/xml" ;
-            ns1:description "GML" ] .
+    proc:schema [ a ns2:string ;
+            ns2:contentMediaType "text/xml" ;
+            ns2:description "GML" ] .
 
 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/example-implementation-profile/inputs/geometry2> dcterms:type <https://geolabs.github.io/bblocks-generic-profiles/def/data-type/geometry> ;
     proc:keywords "GML",
@@ -361,9 +361,9 @@ Third tier of the four-tier model (OGC 14-065 WPS 2.0.2 §7.5): Concept -> Gener
     proc:metadata [ dcterms:title "Generic Profile: Binary spatial predicate -- input `geometry2`" ;
             proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/binary-spatial-predicate/inputs/geometry2> ;
             proc:role <https://geolabs.github.io/bblocks-generic-profiles/def/role/generic-input> ] ;
-    proc:schema [ a ns1:string ;
-            ns1:contentMediaType "text/xml" ;
-            ns1:description "GML" ] .
+    proc:schema [ a ns2:string ;
+            ns2:contentMediaType "text/xml" ;
+            ns2:description "GML" ] .
 
 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/example-implementation-profile/outputs/result> dcterms:type <https://geolabs.github.io/bblocks-generic-profiles/def/data-type/boolean> ;
     proc:keywords "boolean" ;
@@ -668,13 +668,18 @@ x-jsonld-prefixes:
   gp: https://geolabs.github.io/bblocks-generic-profiles/def/
   proc: https://w3id.org/ogc/api/processes/
   dct: http://purl.org/dc/terms/
+x-bblocks-metadata:
+  itemIdentifier: generic-profiles.implementation-profile
+  register: https://gfenoy.github.io/bblocks-generic-profiles/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-10-09'
 
 ```
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/schema.json)
-* JSON version: [schema.json](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/schema.yaml)
+* YAML version: [schema.yaml](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/schema.json)
+* JSON version: [schema.json](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/schema.yaml)
 
 
 # JSON-LD Context
@@ -764,7 +769,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://geolabs.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/context.jsonld)
+[context.jsonld](https://gfenoy.github.io/bblocks-generic-profiles/build/annotated/implementation-profile/context.jsonld)
 
 ## Sources
 
@@ -774,6 +779,6 @@ You can find the full JSON-LD context here:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/GeoLabs/bblocks-generic-profiles](https://github.com/GeoLabs/bblocks-generic-profiles)
+* URL: [https://github.com/gfenoy/bblocks-generic-profiles](https://github.com/gfenoy/bblocks-generic-profiles)
 * Path: `_sources/implementation-profile`
 

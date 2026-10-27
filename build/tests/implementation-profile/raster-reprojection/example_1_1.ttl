@@ -1,22 +1,22 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix gp: <https://geolabs.github.io/bblocks-generic-profiles/def/> .
-@prefix ns1: <https://w3id.org/ogc/api/schema/> .
+@prefix ns1: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/outputs/> .
 @prefix ns2: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/inputs/> .
-@prefix ns3: <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/outputs/> .
+@prefix ns3: <https://w3id.org/ogc/api/schema/> .
 @prefix proc: <https://w3id.org/ogc/api/processes/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-reprojection> a skos:Concept ;
-    dcterms:source [ dcterms:references <https://www.ogc.org/standards/wcps/> ;
-            dcterms:title "OGC 08-068r2 Web Coverage Processing Service (WCPS) Language Interface Standard" ],
-        [ dcterms:references <https://gdal.org/programs/gdalwarp.html> ;
-            dcterms:title "GDAL gdalwarp -- Image mosaicing, reprojection and warping utility" ] ;
+    dcterms:source [ dcterms:references <https://gdal.org/programs/gdalwarp.html> ;
+            dcterms:title "GDAL gdalwarp -- Image mosaicing, reprojection and warping utility" ],
+        [ dcterms:references <https://www.ogc.org/standards/wcps/> ;
+            dcterms:title "OGC 08-068r2 Web Coverage Processing Service (WCPS) Language Interface Standard" ] ;
     skos:definition "Reprojects a raster coverage to another coordinate reference system, resampling pixel values as needed, preserving the coverage's content." ;
     skos:inScheme gp:implementation-profile ;
     skos:prefLabel "Raster reprojection" ;
     gp:inputs [ ns2:raster <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-reprojection/inputs/raster> ;
             ns2:targetCRS <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-reprojection/inputs/targetCRS> ] ;
-    gp:outputs [ ns3:raster <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-reprojection/outputs/raster> ] ;
+    gp:outputs [ ns1:raster <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-reprojection/outputs/raster> ] ;
     gp:refinesGenericProfile <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-reprojection> ;
     gp:status "submitted" ;
     proc:keywords "GDAL",
@@ -37,10 +37,10 @@
     proc:metadata [ dcterms:title "Generic Profile: Raster reprojection -- input `raster`" ;
             proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-reprojection/inputs/raster> ;
             proc:role <https://geolabs.github.io/bblocks-generic-profiles/def/role/generic-input> ] ;
-    proc:schema [ a ns1:string ;
-            ns1:contentEncoding "base64" ;
-            ns1:contentMediaType "image/tiff" ;
-            ns1:description "GeoTIFF" ] .
+    proc:schema [ a ns3:string ;
+            ns3:contentEncoding "base64" ;
+            ns3:contentMediaType "image/tiff" ;
+            ns3:description "GeoTIFF" ] .
 
 <https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-reprojection/inputs/targetCRS> dcterms:type <https://geolabs.github.io/bblocks-generic-profiles/def/data-type/string> ;
     proc:keywords "CRS" ;
@@ -54,8 +54,8 @@
     proc:metadata [ dcterms:title "Generic Profile: Raster reprojection -- output `raster`" ;
             proc:href <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-reprojection/outputs/raster> ;
             proc:role <https://geolabs.github.io/bblocks-generic-profiles/def/role/generic-output> ] ;
-    proc:schema [ a ns1:string ;
-            ns1:contentEncoding "base64" ;
-            ns1:contentMediaType "image/tiff" ;
-            ns1:description "GeoTIFF" ] .
+    proc:schema [ a ns3:string ;
+            ns3:contentEncoding "base64" ;
+            ns3:contentMediaType "image/tiff" ;
+            ns3:description "GeoTIFF" ] .
 

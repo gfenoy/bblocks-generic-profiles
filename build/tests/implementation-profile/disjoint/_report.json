@@ -2,7 +2,7 @@
   "title": "Validation report for generic-profiles.implementation-profile.disjoint - Implementation Profile: Disjoint",
   "bblockName": "Implementation Profile: Disjoint",
   "bblockId": "generic-profiles.implementation-profile.disjoint",
-  "generated": "2026-10-09T10:08:00.404550+00:00",
+  "generated": "2026-10-27T13:10:46.107246+00:00",
   "result": true,
   "items": [
     {
@@ -10,7 +10,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/implementation-profile/disjoint/example_1_1.json",
-        "url": "https://geolabs.github.io/bblocks-generic-profiles/build/tests/implementation-profile/disjoint/example_1_1.json",
+        "url": "https://gfenoy.github.io/bblocks-generic-profiles/build/tests/implementation-profile/disjoint/example_1_1.json",
         "exampleIndex": 1,
         "snippetIndex": 1,
         "language": "application/json"
